@@ -1,0 +1,40 @@
+<%- include('partials/header') -%>
+
+<p><%= description %></p>
+
+<% product.forEach( function(item) { %>
+  <% keys.forEach( function(key) { %>
+    <% if(key == 'special_offer'){%>
+      <% keysSpecialOffer.forEach( function(eKey) { %>
+          <p> <%= item[key][eKey] %></p>   <!-- Special Offer elements -->
+      <% }) %>
+    <% } else if ( key == 'description') { %> <!-- elements from description -->
+        <% for(let i= 0 ; i < item[key].length ; i++){ %>
+          <p> <%= item[key][i].image %> </p>
+          <p> <%= item[key][i].title %> </p>
+          <% for(let j= 0 ; j < item[key][i]['content'].length ; j++){ %>
+              <p> <%= item[key][i]['content'][j].p %> </p>
+            <% } %>
+          <% } %>
+    <% } else if ( key == 'specification') { %>   <!-- elements from Specification -->
+
+      <% keysSpecification.forEach( function(eKey) { %>
+        <% if (eKey == 'processor') { %>
+          <p> <%= eKey %> </p>
+          <%  keysProcessor.forEach( function(eeKey) {%>
+                <p> <%= item[key][eKey][eeKey] %></p>
+          <% }) %>
+        <% } else { %>
+          <p> <%= item[key][eKey] %></p>
+        <% } %>
+      <% }) %>
+    <% } else {%>
+      <p><%= item[key] %></p>
+    <% } %>
+  <% }) %>
+<% }) %>
+
+
+
+
+<%- include('partials/footer') -%>

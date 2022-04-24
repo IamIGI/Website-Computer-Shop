@@ -1,0 +1,65 @@
+<%- include('partials/header') -%>
+
+<p><%= description %></p>
+
+
+<% product.forEach( function(item) { %>
+    <p> <%= item.images %> </p>
+
+    <p> <%= item.name %> </p>
+    <p> <%= item.price %> </p>
+    <% if (item.special_offer.mode == true) { %>
+        <p> <%= item.special_offer.price %> </p>
+    <% } %>
+    <p> <%= item.quantity %> </p>
+    <p> <%= item.brand %> </p>
+    <!-- Description -->
+    <% (item.description).forEach( function( item ){ %>
+      <p> <%= item.image%> </p>
+      <p> <%= item.title %> </p>
+      <% (item.content).forEach( function( item ){ %>
+          <p> <%= item.p %> </p>
+      <% }) %>
+    <% }) %>
+    <!-- END OF 'Description' -->
+    <!-- Specifciation-->
+    <p> <%= item.specification.processor.description %> </p>
+    <p> <%= item.specification.ram.description %> </p>
+    <p> <%= item.specification.disk.description %> </p>
+    <p> <%= item.specification.screen_diagonal %> </p>
+    <p> <%= item.specification.resolution.description %> </p>
+    <p> <%= item.specification.graphics_card %> </p> <!-- Nie czyta -->
+    <% (item.specification.communication).forEach( function( item ){ %>
+        <p> <%= item.com %> </p>
+    <% }) %>
+    <% (item.specification.ports).forEach( function( item ){ %>
+        <p> <%= item.port %> </p>
+    <% }) %>
+    <p> <%= item.specification.battery_capacity.description %> </p>
+    <p> <%= item.specification.color %> </p>
+    <p> <%= item.specification.operating_system %> </p>
+    <p> <%= item.specification.additional_information %> </p> <!-- problem z przeczytaniem zawartosci info -->
+    <% (item.specification.additional_information).forEach( function( item ){ %>
+        <p> <%= item.info %> </p>                             <!-- problem z przeczytaniem zawartosci info -->
+    <% }) %>
+    <p> <%= item.specification.height %> </p>
+    <p> <%= item.specification.width %> </p>
+    <p> <%= item.specification.depth %> </p>
+    <p> <%= item.specification.weight %> </p>
+    <p> <%= item.specification.supplied_accessories %> </p>
+    <p> <%= item.specification.guarantees.description %> </p>
+    <p> <%= item.specification.guarantees.duration %> </p>
+    <p> <%= item.specification.producent_code %> </p>
+    <p> <%= item.specification.Xigi_code %> </p>
+
+
+<% }) %>
+
+
+
+
+
+
+
+
+<%- include('partials/footer') -%>

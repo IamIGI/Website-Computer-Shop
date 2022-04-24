@@ -1,0 +1,18 @@
+<% Object.keys(productObjectJSON).forEach( function(item) { %>
+  <% if( typeof(productObjectJSON[item]) == 'object'){ %>   <!-- Gdy posiada zagniezdzone w sobie dokumenty -->
+       <p><%= JSON.stringify(productObjectJSON[item]) %></p>  <!-- Zwroc JSON-a -->
+  <% }else{ %>
+       <p><%= productObjectJSON[item] %></p>                <!-- Zwroc wartosc -->
+  <% } %>
+<% }) %>
+
+<!-- NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN -->
+
+<% Object.keys(productObjectJSON).forEach( function(item) { %>
+  <% if( typeof(productObjectJSON[item]) == 'object' ) {%>
+    <p> <%= JSON.stringify(productObjectJSON[item]) %> </p>
+  <% } %>
+  <p> <%= productObjectJSON[item] %> </p>
+<% }) %>
+
+<!-- NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN -->
