@@ -32,7 +32,7 @@ function iterateObject(obj, array) {
       iterateObject(obj[prop], array)
     } else {
       if(array.includes(prop)){
-        console.log(prop.toUpperCase() + ': ', obj[prop]);
+        // console.log(prop.toUpperCase() + ': ', obj[prop]);
 
         // dict[prop] = obj[prop];
       }

@@ -1,10 +1,9 @@
-
 /* -------------------------------Menu nav bar CSS */
 /* Resize images */
-.logoImage  img {
-    width: 60px;
-    height: auto;
-    border-radius: 80%;
+.logoImage img {
+  width: 60px;
+  height: auto;
+  border-radius: 80%;
 }
 
 .MenuKontoButtons {
@@ -14,55 +13,196 @@
   text-align: center;
   font-size: small;
 }
-.dropdownMenuEdit{
-  width:300px;
+
+.dropdownMenuEdit {
+  width: 300px;
 }
-.dropDownMenuJustLi{
+
+.dropDownMenuJustLi {
   text-align: center;
 }
+
 /* -------------------------------Carousel css */
-#ads{
+#ads {
   height: 500px;
 }
-.container-ads{
+
+.container-ads {
   /* padding:2% 5%; */
   border-radius: 10%;
   margin: 1% 5%;
   height: 300px;
 }
-.container-ads img{
+
+.container-ads img {
   border-radius: 26%;
   height: 450px;
 }
-.container-ads p{
+
+.container-ads p {
   font-size: large;
 }
+
 /* -------------------------------recommended css */
-.GoracyStrzal{
+.GoracyStrzal {
   padding: 3%;
   border-style: solid;
   border-color: grey;
   border-width: 1px;
   border-radius: 20%;
 }
-.GoracyStrzal .m1 img{
-    max-width: 350px;
-    max-height: auto;
+
+.GoracyStrzal .m1 img {
+  max-width: 350px;
+  max-height: auto;
 }
-.GoracyStrzal .m2{
+
+.GoracyStrzal .m2 {
   text-align: center;
 }
-.GoracyStrzal .m2 .OldPrize{
+
+.GoracyStrzal .m2 .OldPrize {
   text-decoration: line-through;
 }
-.recommendedProducts img{
+
+.recommendedProducts img {
   max-width: 200px;
   max-height: 200px;
 }
-.recommendedProducts .m1{
+
+.recommendedProducts .m1 {
   height: 220px;
   padding: 10px;
 }
+
 .recommendedProducts .m2 {
   text-align: center;
 }
+
+/*------------------GRID OPTIONS CSS*/
+/* @media (min-width: 0px){ */
+/* .grid-container {
+  margin: 25px 16%;
+} */
+
+.grid-item {
+  min-height: 40px;
+  min-width: 50px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.grid-box-1 {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-gap: 20px;
+}
+
+.grid-box-1 .grid-item-1 {
+  font-size: 14px;
+}
+
+.grid-box-1 .grid-item-2 {
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
+  justify-content: flex-end;
+}
+
+.grid-box-1 .grid-item-2>div {
+  justify-content: center;
+  text-align: center;
+}
+
+.grid-box-1 .grid-item-4 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 166px 380px;
+}
+
+.grid-item-4-1 {
+  grid-column: 1 / -1;
+  max-height: 150px;
+}
+.grid-item-4-2 {
+  align-self: flex-start;
+  justify-self: start;
+}
+.grid-item-4-3 {
+  display: grid;
+  grid-template-columns: 40% 80%;
+  grid-template-rows: 30px 30px 270px;
+  justify-content: center;
+}
+.grid-item-4-3-1{
+  grid-column: 1 / -1;
+  justify-self: right;
+  padding-right: 20%;
+  align-self: center;
+}
+.grid-item-4-3-2{
+  /* align-self: center; */
+  justify-self: right;
+}
+.grid-item-4-3-3{
+  /* align-self: center; */
+  justify-self: center;
+  width: 220px;
+}
+.grid-item-4-3-4{
+  grid-column: 1 / -1;
+  margin-top: 30px;
+}
+
+/*------------------edit text propertiess*/
+.bold-text{
+  font-weight: bold;
+}
+.grey-text{
+  color: #777;
+}
+.smaller-text{
+  font-size: 13px;
+}
+.green-text{
+  color: green;
+}
+.products-numbers{
+  width: 50px;
+  margin: left;
+}
+.ram-buttons_basic{
+  margin-left: 20px;
+  width: 110px;
+}
+.ram-buttons_change{
+  margin-left: 20px;
+  /* width: 140px; */
+}
+ul{
+  list-style-type:none;
+  line-height: 1.8;
+}
+.grid-item-4-3-4 ul {
+  line-height: 1.5;
+}
+.grid-item-4-3-4 li{
+  border-bottom: 1px solid #bbc3c9;
+  margin-bottom: 10px;
+}
+
+/* }
+@media (min-width: 1921px){
+  .grid-container{
+    margin: 25px 21%;
+  }
+}
+@media (min-width: 2300px){
+  .grid-container{
+    margin: 25px 24%;
+  }
+}
+@media (min-width: 2900px){
+  .grid-container{
+    margin: 25px 27%;
+  }
+} */

@@ -1,65 +1,166 @@
-<%- include('partials/header') -%>
+<div class="container">
 
+
+  <div class="grid-container">
+    <%- include('partials/header') -%>
+    <div class="grid-box-1">
+
+      <div class="grid-item grid-item-1">
+        x-kom > Laptopy i komputery > Laptopy/Notebooki/Ultrabooki > Notebooki / Laptopy 15,6"
+      </div>
+      <div class="grid-item grid-item-2">
+        <div class="grid-item-2-1">
+          <i class="fa-solid fa-print"></i> Drukuj
+        </div>
+        <div class="grid-item-2-2">
+          <i class="fa-solid fa-heart"></i> Zapisz na liscie
+        </div>
+        <div class="grid-item-2-3">
+          <i class="fa-solid fa-scale-balanced"></i> Porownaj
+        </div>
+      </div>
+      <div class="grid-item grid-item-3">
+        <!-- porduct gallery -->
+        <%- include('partials/gallery_product') -%>
+      </div>
+      <div class="grid-item grid-item-4">
+        <!-- grid-item-4 -->
+        <div class="grid-item grid-item-4-1">
+          <h3>MSI GP66 i7-11800H/32GB/512/Win10X RTX3070 144Hz</h3>
+          <p>⭐⭐⭐⭐★ (3 opinie)</p>
+          <p class="grey-text">od: <span class="bold-text">MSI</span> | kod producenta: Leopard | GP66 11UG-279XPL | kod x-kom: 677332</p>
+          <hr>
+        </div>
+        <div class="grid-item grid-item-4-2">
+          <ul>
+            <li><span class="grey-text"> <u>Procesor: </u></span> Intel Core i7-11800H</li>
+            <li><span class="grey-text"><u>Pamięć: </u></span> 16 GB </li>
+            <li><span class="grey-text"><u>Grafika: </u></span> NVIDIA GeForce RTX 3070 + Intel UHD Graphics</li>
+          </ul>
+          <p> <i class="fa-solid fa-arrow-down"></i> Przewiń do pełnej specyfikacji </p>
+          <hr>
+          <p class="grey-text"><u>Pamięć RAM</u>
+            <br>
+            <button type="button" class="btn btn-outline-secondary ram-buttons_change"> 16 GB (+400 zł) </button>
+            <button type="button" class="btn btn-outline-secondary ram-buttons_basic"> 32 GB </button>
+          </p>
+          <p class="grey-text"><u>System operacyjny</u></p>
+          <div class="dropdown products-numbers">
+            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+              Microsoft Windows 10 Home PL
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><button class="dropdown-item" type="button">Brak Systemu</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid-item grid-item-4-3">
+          <!-- grid-item-4-3 -->
+          <div class="grid-item grid-item-4-3-1">
+            <h4>8499,00 zł</h4>
+          </div>
+          <div class="grid-item grid-item-4-3-2">
+            <div class="dropdown products-numbers">
+              <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                1
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><button class="dropdown-item" type="button">2</button></li>
+                <li><button class="dropdown-item" type="button">3</button></li>
+                <li><button class="dropdown-item" type="button">4</button></li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid-item grid-item-4-3-3">
+            <button type="button" class="btn btn-success  btn-block"> <i class="fa-solid fa-bucket"></i> Koszyk</button>
+          </div>
+          <div class="grid-item grid-item-4-3-4">
+            <ul>
+              <li><i class="fa-solid fa-check"></i>       <span class="smaller-text"> <span class="green-text">Dostępne</span> <br> Dowiedz się więcej </span></li>
+              <li><i class="fa-solid fa-clock"></i>       <span class="smaller-text"> <span class="green-text">Kup teraz, otrzymasz pojutrze</span> <br> Dowiedz się więcej </span></li>
+              <li><i class="fa-solid fa-car"></i> <span class="smaller-text"> <span class="green-text">Darmowa dostawa</span> <br> Sprawdź szczegóły </span></li>
+              <li><i class="fa-solid fa-landmark"></i> <span class="smaller-text"> <span class="green-text">Raty tylko 249.72 zl</span> <br> Oblicz ratę</span></li>
+              <li><i class="fa-solid fa-shop"></i>        <span class="smaller-text"> <span class="green-text">Sprawdź dostępnośc w salonach</span> <br> Wybierz salon </span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-box-2">
+      grid-box-2
+      <div class="grid-item grid-item-navbar">
+        grid-item-navbar
+      </div>
+      <div class="grid-item grid-item-description">
+        grid-item-description
+      </div>
+      <div class="grid-item grid-item-specification">
+        grid-item-specification
+      </div>
+      <div class="grid-item grid-item-recommended">
+        grid-item-recommended
+      </div>
+      <div class="grid-item grid-item-opinions-rating">
+        grid-item-opinions-rating
+      </div>
+      <div class="grid-item grid-item-opinions-comments">
+        grid-item-opinions-comments
+      </div>
+    </div>
+    <%- include('partials/footer') -%>
+  </div>
+</div>
 <p><%= description %></p>
 
 
 <% product.forEach( function(item) { %>
-    <p> <%= item.images %> </p>
+<p> <%= item.images %> </p> <!-- nie czyta -->
 
-    <p> <%= item.name %> </p>
-    <p> <%= item.price %> </p>
-    <% if (item.special_offer.mode == true) { %>
-        <p> <%= item.special_offer.price %> </p>
-    <% } %>
-    <p> <%= item.quantity %> </p>
-    <p> <%= item.brand %> </p>
-    <!-- Description -->
-    <% (item.description).forEach( function( item ){ %>
-      <p> <%= item.image%> </p>
-      <p> <%= item.title %> </p>
-      <% (item.content).forEach( function( item ){ %>
-          <p> <%= item.p %> </p>
-      <% }) %>
-    <% }) %>
-    <!-- END OF 'Description' -->
-    <!-- Specifciation-->
-    <p> <%= item.specification.processor.description %> </p>
-    <p> <%= item.specification.ram.description %> </p>
-    <p> <%= item.specification.disk.description %> </p>
-    <p> <%= item.specification.screen_diagonal %> </p>
-    <p> <%= item.specification.resolution.description %> </p>
-    <p> <%= item.specification.graphics_card %> </p> <!-- Nie czyta -->
-    <% (item.specification.communication).forEach( function( item ){ %>
-        <p> <%= item.com %> </p>
-    <% }) %>
-    <% (item.specification.ports).forEach( function( item ){ %>
-        <p> <%= item.port %> </p>
-    <% }) %>
-    <p> <%= item.specification.battery_capacity.description %> </p>
-    <p> <%= item.specification.color %> </p>
-    <p> <%= item.specification.operating_system %> </p>
-    <p> <%= item.specification.additional_information %> </p> <!-- problem z przeczytaniem zawartosci info -->
-    <% (item.specification.additional_information).forEach( function( item ){ %>
-        <p> <%= item.info %> </p>                             <!-- problem z przeczytaniem zawartosci info -->
-    <% }) %>
-    <p> <%= item.specification.height %> </p>
-    <p> <%= item.specification.width %> </p>
-    <p> <%= item.specification.depth %> </p>
-    <p> <%= item.specification.weight %> </p>
-    <p> <%= item.specification.supplied_accessories %> </p>
-    <p> <%= item.specification.guarantees.description %> </p>
-    <p> <%= item.specification.guarantees.duration %> </p>
-    <p> <%= item.specification.producent_code %> </p>
-    <p> <%= item.specification.Xigi_code %> </p>
+<p> <%= item.name %> </p>
+<p> <%= item.price %> </p>
+<% if (item.special_offer.mode == true) { %>
+<p> <%= item.special_offer.price %> </p>
+<% } %>
+<p> <%= item.quantity %> </p>
+<p> <%= item.brand %> </p>
+<!-- Description -->
+<% (item.description).forEach( function( item ){ %>
+<p> <%= item.image%> </p>
+<p> <%= item.title %> </p>
+<% (item.content).forEach( function( item ){ %>
+<p> <%= item.p %> </p>
+<% }) %>
+<% }) %>
+<!-- END OF 'Description' -->
+<!-- Specifciation-->
+<p> <%= item.specification.processor.description %> </p>
+<p> <%= item.specification.ram.description %> </p>
+<p> <%= item.specification.disk.description %> </p>
+<p> <%= item.specification.screen_diagonal %> </p>
+<p> <%= item.specification.resolution.description %> </p>
+<p> <%= item.specification.graphics_card %> </p> <!-- Nie czyta -->
+<% (item.specification.communication).forEach( function( item ){ %>
+<p> <%= item.com %> </p>
+<% }) %>
+<% (item.specification.ports).forEach( function( item ){ %>
+<p> <%= item.port %> </p>
+<% }) %>
+<p> <%= item.specification.battery_capacity.description %> </p>
+<p> <%= item.specification.color %> </p>
+<p> <%= item.specification.operating_system %> </p>
+<p> <%= item.specification.additional_information %> </p> <!-- problem z przeczytaniem zawartosci info -->
+<% (item.specification.additional_information).forEach( function( item ){ %>
+<p> <%= item.info %> </p> <!-- problem z przeczytaniem zawartosci info -->
+<% }) %>
+<p> <%= item.specification.height %> </p>
+<p> <%= item.specification.width %> </p>
+<p> <%= item.specification.depth %> </p>
+<p> <%= item.specification.weight %> </p>
+<p> <%= item.specification.supplied_accessories %> </p>
+<p> <%= item.specification.guarantees.description %> </p>
+<p> <%= item.specification.guarantees.duration %> </p>
+<p> <%= item.specification.producent_code %> </p>
+<p> <%= item.specification.Xigi_code %> </p>
 
 
 <% }) %>
-
-
-
-
-
-
-
-
-<%- include('partials/footer') -%>
